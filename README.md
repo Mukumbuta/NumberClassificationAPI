@@ -7,7 +7,7 @@ This is an API that classifies numbers based on their mathematical properties, s
 - Determines if a number is prime or perfect.
 - Identifies special number properties (e.g., Armstrong numbers, odd/even classification).
 - Returns the sum of its digits.
-- Provides a fun fact about the number that it fetches from [Number API](http://numbersapi.com)
+- Provides a fun fact about the number that it fetches from [Numbers API](http://numbersapi.com)
 - Handles invalid input gracefully.
 
 ## Endpoint
