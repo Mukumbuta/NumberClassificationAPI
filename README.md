@@ -64,7 +64,7 @@ For mixed input (alphanumeric, symbols, etc.):
    ```
 
 ## Deployment
-This API is deployed to a publicly accessible endpoint.
+This API is deployed and live. You can view it [here](https://api.numerics.tumingle.com/api/classify-number/)
 
 ## License
 This project is licensed under the MIT License.
