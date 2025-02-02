@@ -1,7 +1,7 @@
 # NumberClassificationAPI
 
 ## Overview
-This is an API that classifies numbers based on their mathematical properties, such as prime, perfect, Armstrong, and odd/even. It also provides a fun fact about the number. Built with C# and ASP.NET Core, the API returns structured JSON responses, handles invalid input gracefully.
+This is an API that classifies numbers based on their mathematical properties, such as prime, perfect, Armstrong, etc. Built with C# and ASP.NET Core.
 
 ## Features
 - Determines if a number is prime or perfect.
