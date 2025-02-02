@@ -7,7 +7,7 @@ This is an API that classifies numbers based on their mathematical properties, s
 - Determines if a number is prime or perfect.
 - Identifies special number properties (e.g., Armstrong numbers, odd/even classification).
 - Returns the sum of its digits.
-- Provides a fun fact about the number.
+- Provides a fun fact about the number that it fetches from (Number API)[http://numbersapi.com]
 - Handles invalid input gracefully.
 
 ## Endpoint
@@ -58,13 +58,13 @@ For mixed input (alphanumeric, symbols, etc.):
    ```sh
    cd NumberClassificationAPI
    ```
-3. Run the application (for ASP.NET Core):
+3. Run the application :
    ```sh
    dotnet run
    ```
 
 ## Deployment
-Ensure the API is deployed to a publicly accessible endpoint.
+This API is deployed to a publicly accessible endpoint.
 
 ## License
 This project is licensed under the MIT License.
