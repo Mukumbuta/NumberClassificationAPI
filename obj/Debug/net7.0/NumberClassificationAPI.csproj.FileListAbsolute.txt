@@ -31,3 +31,4 @@
 /home/emmanuel/Documents/MyProjects/NumberClassificationAPI/obj/Debug/net7.0/NumberClassificationAPI.pdb
 /home/emmanuel/Documents/MyProjects/NumberClassificationAPI/obj/Debug/net7.0/NumberClassificationAPI.genruntimeconfig.cache
 /home/emmanuel/Documents/MyProjects/NumberClassificationAPI/obj/Debug/net7.0/ref/NumberClassificationAPI.dll
+/home/emmanuel/Documents/MyProjects/NumberClassificationAPI/bin/Debug/net7.0/Newtonsoft.Json.dll

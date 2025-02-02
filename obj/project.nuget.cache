@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "2rzHxj02BraizHrRbpBP04g7csp8m4dHWJUIfLO8YCAkztW8ntMR8y/TTY5f8kr4WdT4OjqWxPJ9YywZSF5vYA==",
+  "dgSpecHash": "B32N32Z/82aXr9hPWm2mzmL5CfcsgJYwtMp2ZspW1SSWRTIOnuMrJF8nTQcJ0bIh+0zq8dYMjWwQcejk2FBbzA==",
   "success": true,
   "projectFilePath": "/home/emmanuel/Documents/MyProjects/NumberClassificationAPI/NumberClassificationAPI.csproj",
   "expectedPackageFiles": [
     "/home/emmanuel/.nuget/packages/microsoft.aspnetcore.openapi/7.0.20/microsoft.aspnetcore.openapi.7.0.20.nupkg.sha512",
     "/home/emmanuel/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "/home/emmanuel/.nuget/packages/microsoft.openapi/1.4.3/microsoft.openapi.1.4.3.nupkg.sha512",
+    "/home/emmanuel/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
     "/home/emmanuel/.nuget/packages/swashbuckle.aspnetcore/6.5.0/swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
     "/home/emmanuel/.nuget/packages/swashbuckle.aspnetcore.swagger/6.5.0/swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "/home/emmanuel/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.5.0/swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",

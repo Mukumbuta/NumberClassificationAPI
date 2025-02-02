@@ -1,14 +1,17 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 [ApiController]
 [Route("api/classify-number")]
 public class NumberClassificationController : ControllerBase
 {
     [HttpGet]
-    public IActionResult ClassifyNumber([FromQuery] string number)
+    public async Task<IActionResult> ClassifyNumber([FromQuery] string number)
     {
         // Validate input: Check if it's a valid integer
         if (!int.TryParse(number, out int num))
@@ -26,7 +29,7 @@ public class NumberClassificationController : ControllerBase
         bool isPerfect = IsPerfect(num);
         bool isArmstrong = IsArmstrong(num);
         int digitSum = num.ToString().Sum(c => c - '0');
-        string funFact = GetFunFact(num, isArmstrong);
+        string funFact = await GetFunFactAsync(num);
 
         if (isPrime)
             properties.Add("prime");
@@ -103,12 +106,38 @@ public class NumberClassificationController : ControllerBase
         return sum == original;
     }
 
-    private static string GetFunFact(int num, bool isArmstrong)
+    // private static string GetFunFact(int num, bool isArmstrong)
+    // {
+    //     http://numbersapi.com/#5/math
+    //     if (isArmstrong)
+    //         return $"{num} is an Armstrong number because its digits raised to the power sum up to itself.";
+    //     if (num % 2 == 0)
+    //         return $"{num} is an even number.";
+    //     return $"{num} is a number with very unique properties.";
+    // }
+
+    private static readonly HttpClient client = new();
+
+    public async Task<string> GetFunFactAsync(int number)
     {
-        if (isArmstrong)
-            return $"{num} is an Armstrong number because its digits raised to the power sum up to itself.";
-        if (num % 2 == 0)
-            return $"{num} is an even number.";
-        return $"{num} is a number with very unique properties.";
+        string url = $"http://numbersapi.com/{number}/math?json=true";
+
+        try
+        {
+            HttpResponseMessage response = await client.GetAsync(url);
+            response.EnsureSuccessStatusCode();
+
+            string responseBody = await response.Content.ReadAsStringAsync();
+
+            // Parse the response to get the 'text' field
+            var json = JsonConvert.DeserializeObject<dynamic>(responseBody);
+
+            // Check for null after deserialization
+            return json?.text ?? "No fun fact available";
+        }
+        catch (Exception ex)
+        {
+            return $"Error fetching fun fact: {ex.Message}";
+        }
     }
 }
